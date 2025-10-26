@@ -29,3 +29,26 @@
 .hbe-button {
     display: none !important;
 }
+
+.pagination-post .cover {
+    display: none !important;
+}
+
+/* 2. 强制将文章导航栏容器的背景设为不透明白色 */
+/* 这里的 .pagination-post 就是您截图中的 nav 元素 */
+.pagination-post {
+    /* 使用 RGBA 设置透明度，这里的 0.8 是不透明度 */
+    background-color: rgba(255, 255, 255, 0) !important; 
+    /* 移除掉您之前设置的 background: #ffffff !important; */
+    background: rgba(255, 255, 255, 0) !important; 
+}
+/* 3. 针对文章导航栏内部的链接或内容区域 */
+.pagination-post a {
+    /* 确保内部链接的背景也是透明的，以继承白色的父元素背景 */
+    background-color: transparent !important;
+}
+
+#post {
+    font-size: 1.1rem !important; /* 增大文章正文 */
+    line-height: 1.8 !important; /* 同时增大行高，提高阅读舒适度 */
+}
